@@ -21,19 +21,24 @@
 </div>
 </section>
 <section>
+
+<div style="height:100%;background:#000;text-align:center;"><b>OUTSIDE OF PIN CONTAINER</b></div>
 <div id="pinContainer">
-	<section class="panel blue">
-		<b>ONE</b>
-	</section>
-	<section class="panel turqoise">
-		<b>TWO</b>
-	</section>
-	<section class="panel green">
-		<b>THREE</b>
-	</section>
-	<section class="panel bordeaux">
-		<b>FOUR</b>
-	</section>
+     <div class="panel first" style="background:#111;">
+        <b>FIRST SLIDE</b>
+     </div>
+     <div class="panel second" style="background:#333;">
+         <b>IN FROM LEFT</b>
+     </div>
+     <div class="panel third" style="background:#555;">
+          <b>IN FROM RIGHT</b>
+     </div>
+     <div class="panel fourth" style="background:#777;">
+          <b>IN FROM TOP</b>
+     </div>
+     <div class="panel fifth" style="background:#999;">
+          <b>IN FROM BOTTOM</b>
+     </div>
 </div>
 </section>
 <!-- Scrollmagic -->
@@ -46,27 +51,27 @@
  <script>
  
  $(function(){
-	var scrollMagicController = new ScrollMagic();
+	var scrollMagicController = new ScrollMagic.Controller();
 	
-	var tween = TweenMax.to('#animation', 0.5, {
+	/*var tween = TweenMax.to('#animation', 0.5, {
 		backgroundColor: 'rgb(255, 39,46)',
 		scale: 4,
 		rotation: 360
-	});
+	});*/
 	
-	var scene = new ScrollMagic.Scene({
+	/*var scene = new ScrollMagic.Scene({
 		triggerElement: '#scene',
-		offset: 150 /*Offset 150 px from top*/
+		offset: 150 /*Offset 150 px from top
 	})
 	.setTween(tween)
 	.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-	.addTo(scrollMagicController);
+	.addTo(scrollMagicController);*/
 	
 	
 	var wipeAnimation = new TimelineMax()
-		.fromTo("section.panel.turqoise", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-		.fromTo("section.panel.green",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-		.fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
+		.fromTo("section.panel.second", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
+		.fromTo("section.panel.third",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+		.fromTo("section.panel.fourth", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
 
 	// create scene to pin and link animation
 	new ScrollMagic.Scene({
