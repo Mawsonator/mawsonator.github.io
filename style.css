@@ -1,8 +1,6 @@
-html{
-	min-height: 100%
-
 body, html {
-	height: 100%
+	height: 100%;
+	background-color: #669999;
 }
 .ScrollSceneIndicators { 
 	z-index: 9999999 !important; 
@@ -17,4 +15,5 @@ body, html {
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	text-align:center;
 }
