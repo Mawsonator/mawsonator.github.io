@@ -5,18 +5,37 @@
  <!-- Styling -->
  
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="style.css">
  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
 
 <title>Matthew Mawson</title>
 
 </head>
 <body>
+<section>
 <h1>*Matthew Says*: Hello World</h1>
 <div class = "col-md-6 col-md-offset-3">
 	<div class = "wrap" id = "scene">
 		<p id = "animation">I'm hosted with GitHub Pages.</p>
 	</div>
 </div>
+</section>
+<section>
+<div id="pinContainer">
+	<section class="panel blue">
+		<b>ONE</b>
+	</section>
+	<section class="panel turqoise">
+		<b>TWO</b>
+	</section>
+	<section class="panel green">
+		<b>THREE</b>
+	</section>
+	<section class="panel bordeaux">
+		<b>FOUR</b>
+	</section>
+</div>
+</section>
 <!-- Scrollmagic -->
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
@@ -31,7 +50,7 @@
 	
 	var tween = TweenMax.to('#animation', 0.5, {
 		backgroundColor: 'rgb(255, 39,46)',
-		scale: 7,
+		scale: 4,
 		rotation: 360
 	});
 	
@@ -40,7 +59,25 @@
 		offset: 150 /*Offset 150 px from top*/
 	})
 	.setTween(tween)
+	.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
 	.addTo(scrollMagicController);
+	
+	
+	var wipeAnimation = new TimelineMax()
+		.fromTo("section.panel.turqoise", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
+		.fromTo("section.panel.green",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+		.fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
+
+	// create scene to pin and link animation
+	new ScrollMagic.Scene({
+			triggerElement: "#pinContainer",
+			triggerHook: "onLeave",
+			duration: "300%"
+		})
+		.setPin("#pinContainer")
+		.setTween(wipeAnimation)
+		.addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
  });
  
  </script>
