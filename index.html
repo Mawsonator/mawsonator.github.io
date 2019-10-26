@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
+ 
+ <!-- Styling -->
+ 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+
 <title>Matthew Mawson</title>
+
 </head>
 <body>
 <h1>*Matthew Says*: Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div class = "col-md-6 col-md-offset-3">
+	<div class = "wrap" id = "scene">
+		<p id = "animation">I'm hosted with GitHub Pages.</p>
+	</div>
+</div>
+<!-- Scrollmagic -->
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+ <script src="jquery.scrollmagic.min.js"></script>
+ <script src="jquery.scrollmagic.debug.js"></script>
+ 
+ <script>
+ 
+ $(function(){
+	var scollMagicController = new Scrollmagic();
+	
+	var tween = TweenMax.to('#animation', 0.5, {
+		backgroundColor: 'rgb(255, 39,46)'
+		scale: 7,
+		rotation: 360
+	})
+	
+	var scene = new ScrollScene({
+		triggerElement: '#scene'
+		offset: 150 /*Offset 150 px from top*/
+	}
+	
+	.setTween(tween);
+	.addTo(scollMagicController);
+ });
+ 
+ </script>
 </body>
 </html>
