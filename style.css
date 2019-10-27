@@ -10,8 +10,8 @@ body, html {
 
 #pinContainer {
 	width: 100%;
-	min-height: -webkit-fill-available;
-	height: 100%;
+	/*min-height: -webkit-fill-available;*/
+	height: calc(100%);
 	overflow: hidden;
 }
 .panel {
