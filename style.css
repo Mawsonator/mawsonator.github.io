@@ -3,6 +3,15 @@ body, html {
 	background-color: #669999;
 	color: white;
 	margin: 0;
+	
+}
+html{
+	overflow: hidden;
+}
+body{
+	position:fixed;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 .ScrollSceneIndicators { 
 	z-index: 9999999 !important; 
