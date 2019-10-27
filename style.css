@@ -15,7 +15,7 @@ body, html {
 	overflow: hidden;
 }
 .panel {
-	height: 100%;
+	height: calc(100%); !important
 	width: 100%;
 	position: absolute;
 	text-align:center;
