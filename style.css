@@ -11,7 +11,7 @@ body, html {
 #pinContainer {
 	width: 100%;
 	min-height: -webkit-fill-available;
-	height: calc(100%);
+	height: calc(110%);
 	overflow: hidden;
 }
 .panel {
