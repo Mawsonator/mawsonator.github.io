@@ -19,8 +19,17 @@ body, html {
 .panel {
 	height: calc(100%) !important;
 	width: 100%;
-	position: absolute;
+	/*position: absolute;*/
 	text-align:center;
+}
+.section_title_line{
+	position: absolute;
+	height: 2px;
+	bottom: 44px;
+	left: 0;
+	right:0;
+	width: 1%;
+	background-color: black;
 }
 
 .vcenter {
