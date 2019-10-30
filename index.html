@@ -74,8 +74,8 @@
 	});
 	
 	var scene = new ScrollMagic.Scene({
-		triggerElement: '#section_title'
-		//offset: 150 //Offset 150 px from top
+		triggerElement: '#second',
+		triggerHook: "onCenter"//offset: 150 //Offset 150 px from top
 	})
 	.setTween(tween)
 	.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
