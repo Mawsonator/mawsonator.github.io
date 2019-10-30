@@ -22,9 +22,9 @@ body, html {
 	text-align:center;
 }
 .section_title_line{
-	position: absolute;
+	position: relative;
 	height: 2px;
-	bottom: 44px;
+	bottom: 20px;
 	left: 0;
 	right:0;
 	width: 1%;
