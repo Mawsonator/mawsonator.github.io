@@ -27,9 +27,9 @@
      </div>
 	 <div style="height:200px">
 	 </div>
-     <div class="panel second" style="background:#333;">
-		<div class="section_title">
-         <h3>About Me</h3>
+     <div class="panel second">
+     <div class="section_title"></div>
+         <h3 class="section_heading" >About Me</h3>
 		 <div class="section_title_line"></div>
      </div>
      <div class="panel third" style="background:#555;">
@@ -63,44 +63,24 @@
 	$("#panel").css("height", document.documentElement.clientHeight);
  }*/
  
- $(function(){
-	var scrollMagicController = new ScrollMagic.Controller();
+ $(function () { // wait for document ready
+     // init
+  var scrollMagicController = new ScrollMagic.Controller();
 	
-	var tween = TweenMax.to('#section_title_line', 0.5, {
+	var tween = TweenMax.to(".section_title_line", 0.5, {
 		width:"100%",
-		ease: Power3.easeInOut,
-		force3D:true
-		
-	});
+    ease:Power3.easeInOut,
+    force3D:true
+    });
 	
 	var scene = new ScrollMagic.Scene({
-		triggerElement: '#second',
-		triggerHook: "onCenter"//offset: 150 //Offset 150 px from top
+		triggerElement: ".section_title"
+		//triggerHook: "onCenter"//offset: 150 //Offset 150 px from top
 	})
-	.setTween(tween)
+  .setTween(tween) // trigger a TweenMax.to tween
 	.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
 	.addTo(scrollMagicController);
-	
-	
-	
-	/*var wipeAnimation = new TimelineMax()
-		.fromTo("div.panel.second", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone})  // in from left
-		.fromTo("div.panel.third",    1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone})  // in from right
-		.fromTo("div.panel.fourth", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone}); // in from left
-
-	// create scene to pin and link animation
-	new ScrollMagic.Scene({
-			triggerElement: "#pinContainer",
-			triggerHook: "onLeave",
-			duration: "300%"
-		})
-		.setPin("#pinContainer")
-		.setTween(wipeAnimation)
-		.addIndicators() // add indicators (requires plugin)
-		.addTo(scrollMagicController);*/
-		
-	
- });
+});
  
  </script>
 </body>
