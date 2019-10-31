@@ -29,6 +29,17 @@ b {
   position:relative;
   font-size:30px;
 }
+
+.first {
+	background: repeating-linear-gradient(
+		22.5deg,
+		#fbe8a6,
+		#fbe8a6 10px,
+		#f5da7a 10px,
+		#f5da7a 20px
+	);
+}
+
 .section_title_line{
 	position: relative;
 	height: 2px;
