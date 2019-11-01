@@ -25,15 +25,15 @@
 		</div>
 	</div>
     <div class="panel second">
-		<div class="about_section_title"></div>
-			<h3 class="about_section_heading" >About Me</h3>
-			<div class="about_section_title_line"></div>
+		<div class="about_title section_title"></div>
+			<h3 class="about_heading section_heading" >About Me</h3>
+			<div class="about_line section_title_line"></div>
 		</div>
     </div>
     <div class="panel third">
-        <div class="projects_section_title">
-			<h3 class="projects_section_heading" >Projects</h3>
-			<div class="projects_section_title_line"></div>
+        <div class="projects_title section_title">
+			<h3 class="projects_heading section_heading" >Projects</h3>
+			<div class="projects_line section_title_line"></div>
 		</div>
     </div>
 
@@ -66,14 +66,14 @@
 	
 	/*About Me*/
 	
-	var about_tween = TweenMax.to(".about_section_title_line", 0.5, {
+	var about_tween = TweenMax.to(".about_line", 0.5, {
 		width:"100%",
     ease:Power3.easeInOut,
     force3D:true
     });
 	
 	var scene = new ScrollMagic.Scene({
-		triggerElement: ".about_section_title"
+		triggerElement: ".about_title"
 		//triggerHook: "onCenter"//offset: 150 //Offset 150 px from top
 	})
 	.setTween(about_tween) // trigger a TweenMax.to tween
@@ -82,14 +82,14 @@
 	
 	/* Projects */
 	
-	var projects_tween = TweenMax.to(".projects_section_title_line", 0.5, {
+	var projects_tween = TweenMax.to(".projects_line", 0.5, {
 		width:"100%",
     ease:Power3.easeInOut,
     force3D:true
     });
 	
 	var scene2 = new ScrollMagic.Scene({
-		triggerElement: ".projects_section_title"
+		triggerElement: ".projects_title"
 		//triggerHook: "onCenter"//offset: 150 //Offset 150 px from top
 	})
 	.setTween(projects_tween) // trigger a TweenMax.to tween
