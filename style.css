@@ -31,6 +31,7 @@ b {
 }
 
 .first {
+	padding-top: 20px;
 	background: repeating-linear-gradient(
 		22.5deg,
 		#fbe8a6,
@@ -38,6 +39,10 @@ b {
 		#f5da7a 10px,
 		#f5da7a 20px
 	);
+}
+
+.second {
+	padding-top: 20px;
 }
 
 .section_title_line{
