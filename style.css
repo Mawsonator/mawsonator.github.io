@@ -50,6 +50,10 @@ b {
 	background-color: #B4DFE5;
 }
 
+card p{
+	color: black;
+}
+
 .section_title_line{
 	position: relative;
 	height: 2px;
