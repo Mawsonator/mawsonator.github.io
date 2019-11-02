@@ -50,8 +50,10 @@ b {
 	background-color: #B4DFE5;
 }
 
-card p{
+myCard{
 	color: black;
+	width: 75%;
+	margin: 15px;
 }
 
 .section_title_line{
