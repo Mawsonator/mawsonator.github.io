@@ -52,13 +52,16 @@ b {
 }
 
 .myCard{
-	opacity:0;
 	color: black;
 	width: 75%;
 	margin: 15px;
 }
 
-.myCard.visible{
+#projCard{
+	opacity:0;
+}
+
+#projCard.visible{
 	opacity: 1;
 }
 
