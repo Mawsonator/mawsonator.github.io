@@ -46,11 +46,13 @@ b {
 }
 
 .third {
+	height: fit-content;
 	padding-top: 20px;
 	background-color: #B4DFE5;
 }
 
 .myCard{
+	
 	color: black;
 	width: 75%;
 	margin: 15px;
