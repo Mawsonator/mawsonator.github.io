@@ -40,6 +40,8 @@ b {
 }
 
 .second {
+	height:auto;
+	padding-bottom: 10%;
 	color: black;
 	padding-top: 20px;
 	background-color: #D2FDFF;
