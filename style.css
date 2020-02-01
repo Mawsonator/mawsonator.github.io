@@ -138,3 +138,35 @@ li {
 .collection_header h1{
 	margin: auto;
 }
+
+/*Social Icons*/
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10%;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-linkedin:hover {
+    background: white;
+    color: #007bb5;
+}
+
+.fa-github{
+  background: black;
+  color: white;
+}
+
+.fa-github:hover {
+    background: white;
+    color: black;
+}
