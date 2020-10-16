@@ -30,7 +30,7 @@ b {
 }
 
 .first {
-	repeating-linear-gradient(
+	background: repeating-linear-gradient(
 		22.5deg,
 		#656565,
 		#484848 10px,
