@@ -30,13 +30,13 @@ b {
 }
 
 .first {
-	background: repeating-linear-gradient(
+	repeating-linear-gradient(
 		22.5deg,
-		#fbe8a6,
-		#fbe8a6 10px,
-		#f5da7a 10px,
-		#f5da7a 20px
-	);
+		#656565,
+		#484848 10px,
+		#484848 10px,
+		#5d5d5d 20px
+ )
 }
 
 .second {
