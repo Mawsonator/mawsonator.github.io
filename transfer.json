@@ -1,0 +1,114 @@
+{
+	"calcId": 1
+	"calcManufacturer": Facit
+	"calcYear": 1970
+	"calcModel": 1132J
+	"calcFormFactor": Desktop
+	"calcCondition": {
+		"ephemera": false
+		"case": false
+		"box": false
+		"manual":false
+		"condition": Partially Working
+	}
+	"calcDisplay": Nixie
+	"calcDescription": A large nixie machine with multiple cards of electronics and core memory. Possibly manufactured with permission from sharp, the burroughs c3317 has very similar internals.
+},
+{
+	"calcId": 2
+	"calcManufacturer": ANITA 
+	"calcYear": 1972
+	"calcModel": 1212D
+	"calcFormFactor": Desktop
+	"calcCondition": {
+		"ephemera": false
+		"case": false
+		"box": false
+		"manual":false
+		"condition": One tube broken, otherwise perfect
+	}
+	"calcDisplay": Nixie
+	"calcDescription": A complex machine in the same case as the 1233D, it is infact the same electronics with functional contacts.
+}
+
+{
+	"calcId": 2
+	"calcManufacturer": ANITA 
+	"calcYear": 1972
+	"calcModel": 811
+	"calcFormFactor": Pocket
+	"calcCondition": {
+		"ephemera": false
+		"case": true
+		"box": false
+		"manual": true
+		"condition": Fully working, slight scuff to battery sticker
+	}
+	"calcDisplay": LED
+	"calcDescription": The most common of the 800 series of ANITA handheld calculators. Came with a white painted or bare-metal case. 
+}
+{
+	"calcId": 2
+	"calcManufacturer": ANITA 
+	"calcYear": 1972
+	"calcModel": 831
+	"calcFormFactor": Pocket
+	"calcCondition": {
+		"ephemera": false
+		"case": true
+		"box": false
+		"manual": true
+		"condition": Fully working
+	}
+	"calcDisplay": LED
+	"calcDescription": Similar to the 811 but with the addition of a square root function
+}
+{
+	"calcId": 2
+	"calcManufacturer": Rockwell ANITA 
+	"calcYear": 1973
+	"calcModel": 1216
+	"calcFormFactor": Desktop
+	"calcCondition": {
+		"ephemera": false
+		"case": false
+		"box": false
+		"manual":false
+		"condition": Perfect condition
+	}
+	"calcDisplay": Panaplex (Gas discharge)
+	"calcDescription": The only calculator with the Rockwell name that doesn't use Rockwell circuits. And the only ANITA calculator not manufactured in the UK. The keys switches are made by Cherry!
+}
+
+{
+	"calcId": 2
+	"calcManufacturer": "Swift"
+	"calcYear": ~1960?
+	"calcModel": Handy Calculator
+	"calcFormFactor": Desktop
+	"calcCondition": {
+		"ephemera": false
+		"case": false
+		"box": false
+		"manual":false
+		"condition": Damage to end of stylus
+	}
+	"calcDisplay": Mechanical
+	"calcDescription": An OEM machine sold under different names and case colours. Simple innards acting akin to a tape counter.
+}
+{
+	"calcId": 2
+	"calcManufacturer": Sharp 
+	"calcYear": 1972
+	"calcModel": ELSI Mini (El-801)
+	"calcFormFactor": Pocket
+	"calcCondition": {
+		"ephemera": false
+		"case": true
+		"box": false
+		"manual": true
+		"condition": Fully working
+	}
+	"calcDisplay": LED
+	"calcDescription": One of my favourite pocket calculators with an aluminium body, a pushing and slide power switch, and a nice removable battery compartment.
+}
