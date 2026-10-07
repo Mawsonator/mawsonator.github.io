@@ -1,0 +1,37 @@
+/*@use '@angular/material' as mat;
+
+$my-primary: mat.define-palette(mat.$light-green-palette, 500);
+$my-accent: mat.define-palette(mat.$light-green-palette, A100, A200);
+
+$my-theme: mat.define-dark-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ )
+));*/
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@include mat.all-component-typographies();
+@include mat.elevation-classes();
+@include mat.app-background();
+
+$my-primary: mat.m2-define-palette(mat.$m2-green-palette, 900);
+$my-accent: mat.m2-define-palette(mat.$m2-green-palette, A100, A200);
+
+$calc-theme: mat.m2-define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ )
+));
+
+@include mat.all-component-themes($calc-theme);
+
+$primary: map.get($calc-theme, primary);
+$accent: map.get($calc-theme, accent);
+
+:root{
+  --color-primary: #{mat.m2-get-color-from-palette($my-primary)};
+  --color-accent: #{mat.m2-get-color-from-palette($my-accent)};
+}

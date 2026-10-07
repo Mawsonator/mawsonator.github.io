@@ -1,0 +1,12 @@
+<mat-card appearance="outlined" class="calc-detail-card">
+  <mat-card-header>
+    <div mat-card-avatar class="card-detail-back" (click)="onBackClick()"><mat-icon >arrow_back</mat-icon></div>
+    <mat-card-title>{{ calculator?.model }}</mat-card-title>
+    <mat-card-subtitle>{{ calculator?.manufacturer }} - {{ calculator?.date }}</mat-card-subtitle>
+  </mat-card-header> 
+  <img mat-card-image class="calc-detail-img"  [src]="calculator?.imageUrl" alt="Calculator Image">
+  <mat-card-content>
+    <calc-condition [condition]="calculator?.condition"></calc-condition>
+    <p>{{ calculator?.description }}</p>
+  </mat-card-content>
+</mat-card>

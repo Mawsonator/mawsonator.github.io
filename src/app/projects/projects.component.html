@@ -1,0 +1,22 @@
+<div class="calc-projects-container">
+  <h1>Projects</h1>
+  <p class="calc-projects-subheading">A variety of projects I worked on at or before University.</p>
+  <div class="calc-projects-grid">
+    <mat-card appearance="outlined" class="calc-project-card" *ngFor="let project of projects">
+      <img mat-card-image *ngIf="project.image" [src]="project.image" [alt]="project.title">
+      <mat-card-header>
+        <mat-card-title>{{ project.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ project.description }}</p>
+        <p class="calc-project-tech">{{ project.tech }}</p>
+      </mat-card-content>
+      <mat-card-content *ngIf="project.link">
+        <a class="calc-project-link" [href]="project.link" target="_blank" rel="noopener">View<span class="calc-link-arrow">&rarr;</span></a>
+      </mat-card-content>
+      <mat-card-content class="calc-project-link-list" *ngIf="project.links">
+        <a class="calc-project-link" *ngFor="let l of project.links" [href]="l.url" target="_blank" rel="noopener">{{ l.label }}<span class="calc-link-arrow">&rarr;</span></a>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

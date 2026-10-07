@@ -1,0 +1,85 @@
+.calc-header{
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.calc-key-container{
+  display: flex;
+  position:relative;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  cursor: pointer;
+
+}
+
+.calc-key{
+  background: radial-gradient(ellipse at 55% 55%, #6b0000, #ff1111);
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 #333333, inset -2px -2px 10px #6b0000;
+  
+  text-decoration: none;
+  width:100%;
+}
+
+.calc-key::before{
+  content:"";
+  background: linear-gradient(90deg, #474747, #1e1f1e);
+  position: absolute;
+  width: 10px;
+  margin-left: 45%;
+  margin-right: 45%;
+  bottom:100%;
+  display:block;
+  background-color: rgb(47, 47, 48);
+  height: 100px;
+  box-shadow: 5px 0 0 #333333;
+}
+
+.calc-key:active{
+  background: radial-gradient(ellipse at 60% 60%, #6b0000, #ff1111);
+  transform-origin: 50% -120% 5px;
+
+  transform: perspective(300px) rotateX(-10deg);
+  box-shadow: 6px 4px 0 -2px #333333, inset -2px -2px 10px #6b0000;
+}
+
+.calc-key-text{
+  color: white;
+  margin: 0 calc((15/1320)*100vw - 6.81px); // calculated to be at 0 at 600width and 15px at 1920width
+  text-decoration: none;
+}
+
+.calc-navbar{
+  box-shadow: 0px 2px 10px 10px #333333;
+  z-index: 3;
+}
+.calc-navbar > .navbar-brand{
+  z-index: 5;
+}
+
+.navbar-spacer {
+  flex: 1 1 auto;
+}
+
+// Replaces @angular/flex-layout's fxHide.gt-xs: visible only below the xs breakpoint (600px)
+.calc-mobile-menu-toggle {
+  display: block;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+// Replaces @angular/flex-layout's fxFlex fxLayout fxLayoutAlign="end" fxHide.xs
+.calc-nav-links {
+  display: none;
+
+  @media (min-width: 600px) {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}

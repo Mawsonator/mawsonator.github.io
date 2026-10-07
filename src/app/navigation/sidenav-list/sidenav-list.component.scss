@@ -1,0 +1,33 @@
+.calc-key-container{
+  display: flex;
+  position:relative;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.calc-key{
+  background: radial-gradient(ellipse at 55% 55%, #6b0000, #ff1111);
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 #333333, inset -2px -2px 10px #6b0000;
+  text-decoration: none;
+  text-align: center;
+  width:90%;
+}
+
+.calc-key:active{
+
+  //background: radial-gradient(ellipse at 60% 60%, #6b0000, #ff1111);
+  transform: scale(0.9);
+  //transform-origin: 50% -120% 5px;
+  //transform: perspective(300px) rotateX(-10deg);
+  //box-shadow: 6px 4px 0 -2px #333333, inset -2px -2px 10px #6b0000;
+}
+
+.calc-key-text{
+  color: white;
+  margin: auto; //0 calc((15/1320)*100vw - 6.81px); // calculated to be at 0 at 600width and 15px at 1920width
+  text-decoration: none;
+}

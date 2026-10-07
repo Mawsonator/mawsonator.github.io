@@ -1,0 +1,51 @@
+<div class="calc-collection-intro">
+  <h1>Collection</h1>
+  <p>A few pieces from my personal collection of vintage calculators.</p>
+  <div class="calc-collection-gallery">
+    <div class="calc-gallery-item" *ngFor="let item of galleryItems">
+      <img [src]="item.imageUrl" [alt]="item.manufacturer + ' ' + item.model">
+      <div class="calc-gallery-overlay">
+        <h3>{{ item.manufacturer }} {{ item.model }}</h3>
+        <p>{{ item.date }}</p>
+        <button mat-stroked-button [routerLink]="['/collection', item.id]">More Info</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="calc-collection-content">
+  <mat-form-field class = "calc-collection-form" appearance="outline">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup) = "applyFilter($event)">
+  </mat-form-field>
+
+  <table mat-table matSort class="calc-table mat-elevation-z8" matSortActive="Manufacturer" matSortDirection="asc" [dataSource] = "dataSource">
+
+    @for (column of normalColumns; track column) {
+      <ng-container [matColumnDef]="column">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ column | removeCalc }}</th>
+        <td mat-cell *matCellDef="let calc">{{ calc[column] }}</td>
+      </ng-container>
+    }
+
+    <ng-container matColumnDef="condition">
+      <th mat-header-cell *matHeaderCellDef>Condition</th>
+      <td mat-cell *matCellDef="let calc"><calc-condition [condition]="calc.condition"></calc-condition><td>
+    </ng-container>
+
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef>Image</th>
+      <td mat-cell *matCellDef="let calc">
+        <img class="calc-table-img" *ngIf="calc.imageUrl" [src]="calc.imageUrl"/>
+        <mat-icon class="calc-table-no-img" *ngIf="!calc.imageUrl" aria-label="No image available">image_not_supported</mat-icon>
+      <td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/collection', row.id]"></tr>
+
+    </table>
+
+    <mat-paginator class="calc-paginator mat-elevation-z2" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of calculators"></mat-paginator>
+</div>

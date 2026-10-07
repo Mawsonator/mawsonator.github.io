@@ -1,0 +1,81 @@
+:host{
+  display: block;
+  background-color: #B4DFE5;
+  min-height: 100vh;
+}
+
+.calc-projects-container{
+  padding: 1em 3em 3em;
+  text-align: center;
+  color: #222;
+}
+
+.calc-projects-container h1{
+  position: relative;
+  padding-bottom: 0.4em;
+}
+
+.calc-projects-container h1::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #222;
+}
+
+.calc-projects-subheading{
+  color: #444;
+  margin-top: 0;
+}
+
+.calc-projects-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5em;
+  text-align: left;
+  margin-top: 1em;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 700px){
+  .calc-projects-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.calc-project-link-list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3em;
+}
+
+.calc-project-link{
+  color: #0d47a1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.calc-project-link:hover{
+  text-decoration: underline;
+}
+
+.calc-link-arrow{
+  display: inline-block;
+  margin-left: 0.3em;
+  transition: transform 0.15s ease-in-out;
+}
+
+.calc-project-link:hover .calc-link-arrow{
+  transform: translateX(4px);
+}
+
+.calc-project-tech{
+  color: #777;
+  font-size: 0.9em;
+}

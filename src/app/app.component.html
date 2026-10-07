@@ -1,0 +1,13 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <calc-sidenav-list (sidenavClose)="sidenav.close()"></calc-sidenav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="mat-background-primary">
+    <calc-header (sidenavToggle)="sidenav.toggle()"></calc-header>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!--<calc-loading *ngIf="showLoading"></calc-loading>-->

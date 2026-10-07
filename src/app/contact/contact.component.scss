@@ -1,0 +1,23 @@
+:host{
+  display: block;
+  background-color: #D2FDFF;
+  min-height: 100vh;
+}
+
+.calc-contact-container{
+  padding: 1em 3em 3em;
+  text-align: center;
+  color: #222;
+}
+
+.calc-contact-links{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.calc-contact-links mat-icon{
+  margin-right: 0.3em;
+}

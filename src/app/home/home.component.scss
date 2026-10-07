@@ -1,0 +1,44 @@
+.calc-home-container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 3em;
+  background: repeating-linear-gradient(
+    22.5deg,
+    #656565,
+    #484848 10px,
+    #484848 10px,
+    #5d5d5d 20px
+  );
+}
+
+.calc-hero{
+  max-width: 800px;
+  text-align: center;
+  color: white;
+}
+
+.calc-hero-name{
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.calc-hero-title{
+  font-weight: 400;
+  color: #d8d8d8;
+  margin-top: 0.25em;
+}
+
+.calc-hero-intro{
+  margin: 1.5em 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.calc-hero-actions{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
